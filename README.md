@@ -10,6 +10,7 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npm install
    npm install --save-dev @types/react @types/react-native
    npm install expo-router
+   npm install react-native-dotenv
    ```
 
 2. Start the app
