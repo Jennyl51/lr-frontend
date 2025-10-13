@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "LrAPP",
-    "slug": "lrapp",
+    "name": "lr-frontend",
+    "slug": "lr-frontend",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "lrapp",
+    "scheme": "lrfrontend",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -43,13 +43,6 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    },
-    "extra": {
-      "router": {},
-      "eas": {
-        "projectId": "9b454638-bdfc-4028-afd3-7e16bb212278"
-      }
-    },
-    "owner": "jennyl5118"
+    }
   }
 }
