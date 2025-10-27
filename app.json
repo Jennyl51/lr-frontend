@@ -7,7 +7,7 @@
     "icon": "./assets/images/icon.png",
     "scheme": "lrfrontend",
     "userInterfaceStyle": "automatic",
-    "platforms": ["ios", "android"],
+    "platforms": ["ios", "android", "web"],
     "newArchEnabled": true,
     "ios": {
       "bundleIdentifier": "com.lumenroute.ios",
