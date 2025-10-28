@@ -33,22 +33,49 @@ export default function TabLayout() {
           ),
         }}
       />
-       <Tabs.Screen
-        name="map/index"
+      <Tabs.Screen
+        name="features/index"
         options={{
-          title: "map",
+          title: "features",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="people-outline" color={color} size={size} />
+            <Ionicons name="book-outline" color={color} size={size} />
           ),
         }}
       />
       <Tabs.Screen
+        name="map/index"
+        options={{
+          title: "map",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="compass" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="alerts/index"
+        options={{
+          title: "alert",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="notifications-outline" color={color} size={size} />
+          ),
+        }}
+      />
+       <Tabs.Screen
+        name="user/index"
+        options={{
+          title: "user",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="person" color={color} size={size} />
+          ),
+        }}
+      />
+      {/* <Tabs.Screen
         name="explore"
         options={{
           title: 'Explore',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
         }}
-      />
+      /> */}
     </Tabs>
   );
 }

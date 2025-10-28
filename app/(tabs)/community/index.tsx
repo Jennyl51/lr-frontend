@@ -79,7 +79,7 @@ export default function CommunityScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#fff", paddingHorizontal: 16 },
+  container: { flex: 1, backgroundColor: "#fff", paddingHorizontal: 16, paddingVertical: 50 },
   searchBar: {
     flexDirection: "row",
     alignItems: "center",
@@ -93,6 +93,7 @@ const styles = StyleSheet.create({
     marginLeft: 8,
     fontSize: 16,
     color: "#333",
+    paddingVertical: 6,
   },
   postCard: {
     backgroundColor: "#fff",
