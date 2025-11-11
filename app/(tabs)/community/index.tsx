@@ -1,16 +1,7 @@
 import React, { useState } from "react";
-import {
-  View,
-  Text,
-  ScrollView,
-  Image,
-  StyleSheet,
-  TouchableOpacity,
-} from "react-native";
+import { View, Text, ScrollView, Image, StyleSheet } from "react-native";
 
 export default function CommunityPage() {
-  const [activeTab, setActiveTab] = useState("community");
-
   const posts = [
     {
       id: 1,
@@ -34,14 +25,6 @@ export default function CommunityPage() {
       retweets: 1,
       likes: 3,
     },
-  ];
-
-  const tabs = [
-    { key: "community", label: "Comm" },
-    { key: "features", label: "Features" },
-    { key: "map", label: "Map" },
-    { key: "alerts", label: "Alerts" },
-    { key: "you", label: "You" },
   ];
 
   return (
@@ -90,32 +73,6 @@ export default function CommunityPage() {
           </View>
         ))}
       </ScrollView>
-
-      {/* Bottom Navigation */}
-      <View style={styles.nav}>
-        <View style={styles.navbar}>
-          {tabs.map((tab) => (
-            <TouchableOpacity
-              key={tab.key}
-              onPress={() => setActiveTab(tab.key)}
-              style={[
-                styles.navBtn,
-                activeTab === tab.key && styles.navBtnActive,
-              ]}
-            >
-              <Text
-                style={[
-                  styles.navLabel,
-                  activeTab === tab.key && styles.navLabelActive,
-                ]}
-              >
-                {tab.label}
-              </Text>
-            </TouchableOpacity>
-          ))}
-        </View>
-        <View style={styles.homebar} />
-      </View>
     </View>
   );
 }
@@ -141,7 +98,7 @@ const styles = StyleSheet.create({
   },
   feed: {
     paddingHorizontal: 16,
-    paddingBottom: 80,
+    paddingBottom: 40,
   },
   post: {
     marginBottom: 28,
@@ -189,49 +146,5 @@ const styles = StyleSheet.create({
     height: 1,
     backgroundColor: "#2a3246",
     marginTop: 8,
-  },
-  nav: {
-    position: "absolute",
-    bottom: 0,
-    width: "100%",
-    backgroundColor: "#0f1320",
-    paddingBottom: 18,
-    paddingTop: 8,
-    borderTopWidth: 1,
-    borderTopColor: "#2a3246",
-  },
-  navbar: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    backgroundColor: "#12182a",
-    borderRadius: 22,
-    marginHorizontal: 16,
-    paddingVertical: 10,
-  },
-  navBtn: {
-    alignItems: "center",
-    justifyContent: "center",
-    paddingVertical: 8,
-    paddingHorizontal: 16,
-    borderRadius: 18,
-  },
-  navBtnActive: {
-    backgroundColor: "#66c2e3",
-  },
-  navLabel: {
-    color: "#dbe5ff",
-    fontSize: 14,
-  },
-  navLabelActive: {
-    color: "#0a0f17",
-    fontWeight: "700",
-  },
-  homebar: {
-    alignSelf: "center",
-    marginTop: 10,
-    width: 120,
-    height: 6,
-    borderRadius: 6,
-    backgroundColor: "#ffffff90",
   },
 });
