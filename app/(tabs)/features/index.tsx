@@ -1,9 +1,17 @@
 // app/(tabs)/features/index.tsx
-import React from "react";
-import { View, Text, StyleSheet, SafeAreaView } from "react-native";
 import { Feather, MaterialCommunityIcons } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
 export default function FeaturesPage() {
+  const router = useRouter();
+
   return (
     <SafeAreaView style={styles.container}>
       {/* Top bar */}
@@ -15,13 +23,18 @@ export default function FeaturesPage() {
       {/* Main content */}
       <View style={styles.main}>
         <View style={styles.orbit}>
-          {/* Six outer color dots */}
+          {/* 5 normal dots */}
           <View style={[styles.dot, styles.dot1]} />
           <View style={[styles.dot, styles.dot2]} />
           <View style={[styles.dot, styles.dot3]} />
           <View style={[styles.dot, styles.dot4]} />
           <View style={[styles.dot, styles.dot5]} />
-          <View style={[styles.dot, styles.dot6]} />
+
+          {/* 🔴 clickable red dot → checkin page */}
+          <TouchableOpacity
+            onPress={() => router.push("/(tabs)/features/checkin" as const)}
+            style={[styles.dot, styles.dot6]}
+          />
 
           {/* Center blue circle */}
           <View style={styles.center}>
